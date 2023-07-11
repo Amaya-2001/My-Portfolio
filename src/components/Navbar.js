@@ -1,5 +1,6 @@
 import React from "react";
 import profile from "../assets/Capture2.PNG";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -28,10 +29,14 @@ function Navbar() {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Home</a>
+                <a>
+                  <Link to="/">Home</Link>
+                </a>
               </li>
               <li>
-                <a>Articles</a>
+                <a>
+                  <Link to="articles">Articles</Link>
+                </a>
               </li>
               <li>
                 <a>Projects</a>
