@@ -42,7 +42,9 @@ function Navbar() {
                 <a>Projects</a>
               </li>
               <li>
-                <a>Contact</a>
+                <a>
+                  <Link to="contact">Contact</Link>
+                </a>
               </li>
             </ul>
           </div>
