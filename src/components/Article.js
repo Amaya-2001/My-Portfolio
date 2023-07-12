@@ -8,6 +8,10 @@ function Article() {
   return (
     <div>
       <Navbar />
+      <h1 className="text-4xl mt-5 text-center text-slate-950">
+        Unlock the Power of my Project Articles, Dive into Inspiring Insights
+        and Expertise!
+      </h1>
       <div class="grid grid-cols-3 gap-6 mt-20 ml-5 mr-5">
         <div className="card w-96 bg-primary text-primary-content">
           <div className="card-body">
