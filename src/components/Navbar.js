@@ -39,7 +39,9 @@ function Navbar() {
                 </a>
               </li>
               <li>
-                <a>Projects</a>
+                <a>
+                  <Link to="project">Projects</Link>
+                </a>
               </li>
               <li>
                 <a>
