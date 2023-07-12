@@ -2,6 +2,7 @@ import React from "react";
 import { FaLinkedin, FaFacebook } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import display from "../assets/3243637.jpg";
+import { Link } from "react-router-dom";
 
 function Content() {
   return (
@@ -9,7 +10,10 @@ function Content() {
       <div className="card w-96 bg-base-100 shadow-xl ml-60 mt-20">
         <div className="card-body items-center text-center">
           <h2 className="card-title text-4xcl">👋Hello, It's Me</h2>
-          <div className="card-title text-2xl italic"> Amaya</div>
+          <div className="card-title text-2xl italic">
+            {" "}
+            Amaya Wickramasinghe
+          </div>
           <p>
             An Undergraduate software Engineer at the Open University of Sri
             Lanka. I possess a strong aptitude for adapting to various
@@ -17,11 +21,14 @@ function Content() {
             technology. I'm excited to share my projects and experiences with
             you.
           </p>
-          <button class="btn rounded-full mt-5 btn-primary btn-outline">
-            <FaLinkedin size="25" />
-            <MdEmail size="25" />
-            <FaFacebook size="25" />
-          </button>
+          <Link to="/contact">
+            <button class="btn rounded-full mt-5 btn-primary btn-outline">
+              <FaLinkedin size="25" />
+              <MdEmail size="25" />
+              <FaFacebook size="25" />
+            </button>
+          </Link>
+
           <div className="card-actions mt-5">
             <button className="btn btn-primary">Download My Resume</button>
           </div>
