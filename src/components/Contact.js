@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
 import profile from "../assets/Capture2.PNG";
+import email from "../assets/gmail_icon-icons.com_62758.png";
+import linkedin from "../assets/linkedin-logo-linkedin-icon-transparent-free-png.webp";
+import facebook from "../assets/Facebook-logo.png";
 
 function Contact() {
   //const [active, setActive] = useState(false);
@@ -10,13 +13,12 @@ function Contact() {
   return (
     <div>
       <Navbar />
-      <div className="collapse w-80 mt-5 mb-10 ml-20" data-theme="light">
-        <input type="radio" name="my-accordion-1" />
-        <div className="collapse-title text-4xl font-medium">
+      <div className="card w-80 mt-5 mb-10 ml-20" data-theme="light">
+        <div className="card-title text-4xl font-medium">
           Thank you for visiting my portfolio!
         </div>
-        <div className="collapse-content">
-          <p className="text-l">
+        <div className="card-content">
+          <p className="text-l mt-5">
             {" "}
             If you are seeking a talented professional who is eager to take
             their career to the next level, I would be thrilled to connect with
@@ -46,7 +48,7 @@ function Contact() {
           </div>
         </div>
         {/* <p className="mt-5 ml-20 mr-20">amawickramasinghe2001@gmail.com</p> */}
-        <div className="btn-group  mt-5 ml-20 mr-20">
+        {/* <div className="btn-group  mt-5 ml-20 mr-20">
           <button
             className="btn btn-outline btn-primary"
             role="link"
@@ -80,6 +82,53 @@ function Contact() {
           >
             Facebook
           </button>
+        </div> */}
+        <div class="grid grid-rows-1 grid-flow-col gap-4">
+          <div
+            className="avatar placeholder mt-10 ml-10"
+            role="link"
+            onClick={() =>
+              openInNewTab(
+                "mailto:amawickramasinghe2001@gmail.com?subject=Subject&body=Body%20goes%20here"
+              )
+            }
+          >
+            <div className="bg-neutral-focus text-neutral-content rounded-full w-12">
+              <button className="btn btn-outline">
+                <img src={email} alt="email" />
+              </button>
+            </div>
+          </div>
+
+          <div
+            className="avatar placeholder mt-10"
+            onClick={() =>
+              openInNewTab(
+                "https://www.linkedin.com/in/amaya-wickramasinghe-6378a6231/"
+              )
+            }
+          >
+            <div className="bg-neutral-focus text-neutral-content rounded-full w-12">
+              <button className="btn btn-outline">
+                <img src={linkedin} alt="email" />
+              </button>
+            </div>
+          </div>
+          <div
+            className="avatar placeholder mt-10"
+            role="link"
+            onClick={() =>
+              openInNewTab(
+                "https://www.facebook.com/profile.php?id=100090623790910"
+              )
+            }
+          >
+            <div className="bg-neutral-focus text-neutral-content rounded-full w-12">
+              <button className="btn btn-outline">
+                <img src={facebook} alt="email" />
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
