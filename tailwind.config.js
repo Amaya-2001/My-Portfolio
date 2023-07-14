@@ -13,7 +13,8 @@ module.exports = {
       "garden",
       "luxury",
       "black",
-      "dracula",
+      "acid",
+      "pastel",
     ],
   },
 };
