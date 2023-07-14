@@ -9,7 +9,10 @@ import attendyImg2 from "../assets/attendy-image2.PNG";
 import gasAppImg from "../assets/gas-app.PNG";
 import attendyImg3 from "../assets/attendy-image3.PNG";
 import attendyImg4 from "../assets/attendy-image4.PNG";
-
+import programming1 from "../assets/javascript.png";
+import programming2 from "../assets/react.js-img.png";
+import programming3 from "../assets/nodejs-1-logo.png";
+import programming4 from "../assets/javaPro.png";
 function Skills() {
   return (
     <div className="grid justify-items-center ... mt-10 mb-10">
@@ -23,7 +26,7 @@ function Skills() {
             </div>
             <figure>
               {/* <img src={display} alt="Shoes" /> */}
-              <div className="carousel w-full">
+              <div className="carousel w-full h-64">
                 <div id="image1" className="carousel-item relative w-full">
                   <img src={skillImg1} alt="skillImg" className="w-full" />
                   <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -91,7 +94,7 @@ function Skills() {
               <p>If a dog chews shoes whose shoes does he choose?</p>
             </div>
             <figure>
-              <div className="carousel w-full">
+              <div className="carousel w-full h-64">
                 <div id="attendyImg1" className="carousel-item relative w-full">
                   <img src={attendyImg1} alt="attendyImg1" className="w-full" />
                   <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
@@ -147,7 +150,52 @@ function Skills() {
               <p>If a dog chews shoes whose shoes does he choose?</p>
             </div>
             <figure>
-              <img src={display} alt="Shoes" />
+              <div className="carousel w-full h-64">
+                <div id="pro1" className="carousel-item relative w-full ">
+                  <img src={programming1} alt="pro1" className="w-full" />
+                  <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#pro4" className="btn btn-circle">
+                      ❮
+                    </a>
+                    <a href="#pro2" className="btn btn-circle">
+                      ❯
+                    </a>
+                  </div>
+                </div>
+                <div id="pro2" className="carousel-item relative w-full">
+                  <img src={programming2} alt="pro2" className="w-full" />
+                  <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#pro1" className="btn btn-circle">
+                      ❮
+                    </a>
+                    <a href="#pro3" className="btn btn-circle">
+                      ❯
+                    </a>
+                  </div>
+                </div>
+                <div id="pro3" className="carousel-item relative w-full">
+                  <img src={programming3} alt="pro3" className="w-full" />
+                  <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#pro2" className="btn btn-circle">
+                      ❮
+                    </a>
+                    <a href="#pro4" className="btn btn-circle">
+                      ❯
+                    </a>
+                  </div>
+                </div>
+                <div id="pro4" className="carousel-item relative w-full">
+                  <img src={programming4} alt="pro4" className="w-full" />
+                  <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+                    <a href="#pro3" className="btn btn-circle">
+                      ❮
+                    </a>
+                    <a href="#pro1" className="btn btn-circle">
+                      ❯
+                    </a>
+                  </div>
+                </div>
+              </div>
             </figure>
           </div>
         </div>
