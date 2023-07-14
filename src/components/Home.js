@@ -3,6 +3,7 @@ import Navbar from "./Navbar.js";
 import Content from "./Content.js";
 import Certificate from "./Certificate.js";
 import Skills from "./Skills.js";
+import Footer from "./Footer.js";
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <Content />
       <Certificate />
       <Skills />
+      <Footer />
     </div>
   );
 }
