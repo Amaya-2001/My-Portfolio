@@ -1,5 +1,4 @@
 import React from "react";
-import display from "../assets/3243637.jpg";
 import skillImg1 from "../assets/skill-image1.PNG";
 import skillImg2 from "../assets/skill-image2.PNG";
 import skillImg3 from "../assets/skill-image3.PNG";
