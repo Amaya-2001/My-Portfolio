@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -9,13 +10,13 @@ function Footer() {
       >
         <div className="grid grid-flow-col gap-4">
           <a className="link link-hover" href="articles">
-            Articles
+            <Link to="/articles">Articles</Link>
           </a>
           <a className="link link-hover" href="projects">
-            Projects
+            <Link to="/project">Projects</Link>
           </a>
           <a className="link link-hover" href="contact">
-            Contact
+            <Link to="/contact">Contact</Link>
           </a>
         </div>
         <div>
