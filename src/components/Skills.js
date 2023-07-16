@@ -19,10 +19,20 @@ function Skills() {
       <h1 className="text-7xl mt-10 mb-10 font-mono">Skills</h1>
       <div class="grid grid-cols-3 gap-4">
         <div>
-          <div className="card w-96 bg-base-100 shadow-xl ml-5">
-            <div className="card-body">
+          <div className="card w-96 bg-base-100 shadow-xl ml-5 h-full">
+            <div className="card-body ">
               <h2 className="card-title font-bold">UX/UI Design</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <p>
+                I have honed my UI/UX design skills through extensive work on
+                various academic projects, allowing me to offer a wealth of
+                experience in this field. To provide a visual representation of
+                my expertise with the{" "}
+                <b>
+                  <i>Figma tool</i>
+                </b>
+                , I have included a collection of captivating design images for
+                your perusal.
+              </p>
             </div>
             <figure>
               {/* <img src={display} alt="Shoes" /> */}
@@ -88,10 +98,20 @@ function Skills() {
         </div>
 
         <div>
-          <div className="card w-96 bg-base-100 shadow-xl ml-10">
+          <div className="card w-96 bg-base-100 shadow-xl ml-10 h-full">
             <div className="card-body">
               <h2 className="card-title font-bold">Web Design</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <p>
+                I am thrilled to inform you that my university colleagues and I
+                have accomplished a remarkable feat by successfully completing
+                our academic project, the{" "}
+                <b>
+                  <i>Attendance Management System</i>
+                </b>{" "}
+                .It brings me great joy to share this achievement with you, as
+                our dedication and teamwork have resulted in a robust and
+                efficient solution.
+              </p>
             </div>
             <figure>
               <div className="carousel w-full h-64">
@@ -144,10 +164,23 @@ function Skills() {
           </div>
         </div>
         <div>
-          <div className="card w-96 bg-base-100 shadow-xl ml-5">
+          <div className="card w-96 bg-base-100 shadow-xl ml-5 h-full">
             <div className="card-body">
               <h2 className="card-title font-bold">Programming Languages</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
+              <p>
+                I am delighted to have the opportunity to share with you a
+                glimpse of the programming languages, I have acquired expertise
+                in. However,{" "}
+                <b>
+                  <i>
+                    my hunger for knowledge knows no bounds as I eagerly explore
+                    various technologies,
+                  </i>
+                </b>{" "}
+                constantly seeking new avenues for learning and growth. Rest
+                assured, I am committed to expanding my skill set and staying
+                up-to-date with the latest advancements in the field.
+              </p>
             </div>
             <figure>
               <div className="carousel w-full h-64">
