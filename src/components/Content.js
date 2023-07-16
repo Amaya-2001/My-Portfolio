@@ -5,6 +5,9 @@ import display from "../assets/3243637.jpg";
 import { Link } from "react-router-dom";
 
 function Content() {
+  const openInNewTab = (url) => {
+    window.open(url, "_blank", "norefrrer");
+  };
   return (
     <div className="flex">
       <div className="card w-96 bg-base-100 shadow-xl ml-60 mt-20">
@@ -30,7 +33,17 @@ function Content() {
           </Link>
 
           <div className="card-actions mt-5">
-            <button className="btn btn-primary">Download My Resume</button>
+            <button
+              className="btn btn-primary"
+              role="link"
+              onClick={() =>
+                openInNewTab(
+                  "https://drive.google.com/file/d/1r9JyQp1USHrXQ6ccGrxNqqWZOPqVWo5h/view?usp=sharing"
+                )
+              }
+            >
+              Download My Resume
+            </button>
           </div>
         </div>
       </div>
