@@ -165,7 +165,7 @@ function Skills() {
         <div>
           <div className="card w-96 bg-base-100 shadow-xl ml-5 h-full">
             <div className="card-body">
-              <h2 className="card-title font-bold">Programming Languages</h2>
+              <h2 className="card-title font-bold">My Tech Stack</h2>
               <p>
                 I am delighted to have the opportunity to share with you a
                 glimpse of the programming languages, I have acquired expertise

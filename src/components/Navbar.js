@@ -1,5 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import "../App.css";
 
 function Navbar() {
   return (
@@ -41,15 +42,21 @@ function Navbar() {
                   href="home"
                   className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
-                  <Link to="/"> Home</Link>
+                  <NavLink to="/" activeClassName="active">
+                    {" "}
+                    Home
+                  </NavLink>
                 </a>
               </li>
               <li>
                 <a
                   href="articles"
                   class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  aria-current="page"
                 >
-                  <Link to="/articles">Articles</Link>
+                  <NavLink to="/articles" activeClassName="active">
+                    Articles
+                  </NavLink>
                 </a>
               </li>
               <li>
@@ -57,7 +64,9 @@ function Navbar() {
                   href="projects"
                   className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
-                  <Link to="/project">Projects</Link>
+                  <NavLink to="/project" activeClassName="active">
+                    Projects
+                  </NavLink>
                 </a>
               </li>
 
@@ -66,7 +75,9 @@ function Navbar() {
                   href="contact"
                   class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                 >
-                  <Link to="/contact">Contact</Link>
+                  <NavLink to="/contact" activeClassName="active">
+                    Contact
+                  </NavLink>
                 </a>
               </li>
             </ul>
