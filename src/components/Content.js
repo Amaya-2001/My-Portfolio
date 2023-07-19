@@ -9,8 +9,8 @@ function Content() {
     window.open(url, "_blank", "norefrrer");
   };
   return (
-    <div className="flex">
-      <div className="card w-96 bg-base-100 shadow-xl ml-60 mt-20">
+    <div className="gap-8 columns-2 ... mt-20">
+      <div className="card w-96 bg-base-100 shadow-xl ml-60  mb-10">
         <div className="card-body items-center text-center">
           <h2 className="card-title text-4xcl">👋Hello, It's Me</h2>
           <div className="card-title text-2xl italic">
@@ -47,7 +47,7 @@ function Content() {
           </div>
         </div>
       </div>
-      <div className="carousel carousel-end rounded-box mt-20 ml-10 mr-5">
+      {/* <div className="carousel carousel-end rounded-box mt-20 ml-10 mr-5">
         <div className="carousel-item">
           <img src={display} alt="Drink" width="300 px" />
         </div>
@@ -57,7 +57,7 @@ function Content() {
         <div className="carousel-item">
           <img src={display} alt="Drink" width="300 px" />
         </div>
-      </div>
+      </div> */}
       {/* <img
         className="mt-40 ml-20"
         src={display}
@@ -65,6 +65,12 @@ function Content() {
         width="565 px"
         // height="765 px"
       /> */}
+      <div className="aspect-video mr-5">
+        <iframe
+          className="w-full aspect-video ..."
+          src="https:/www.youtube.com/embed/tAbcTOTMhs0"
+        ></iframe>
+      </div>
     </div>
   );
 }
