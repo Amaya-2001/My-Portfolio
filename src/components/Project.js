@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
-import display from "../assets/3243637.jpg";
+import academic from "../assets/academic.png";
 import { FaGithub } from "react-icons/fa";
 import todoapp from "../assets/todo-app.webp";
 import chatapp from "../assets/chatApp.png";
@@ -41,7 +41,7 @@ function Project() {
         <div className="row-start-1 col-end-7 col-span-2 ... mt-5 mr-10">
           <div className="card w-96 bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
-              <img src={display} alt="Shoes" className="rounded-xl" />
+              <img src={academic} alt="academic" className="rounded-xl" />
             </figure>
             <div className="card-body items-center text-center">
               <h2 className="card-title">Academic Time Table</h2>
