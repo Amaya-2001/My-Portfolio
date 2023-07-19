@@ -1,7 +1,6 @@
 import React from "react";
 import { FaLinkedin, FaFacebook } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import display from "../assets/3243637.jpg";
 import { Link } from "react-router-dom";
 
 function Content() {
@@ -68,6 +67,7 @@ function Content() {
       <div className="aspect-video mr-5">
         <iframe
           className="w-full aspect-video ..."
+          title="myself iframe"
           src="https:/www.youtube.com/embed/tAbcTOTMhs0"
         ></iframe>
       </div>
