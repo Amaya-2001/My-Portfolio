@@ -68,7 +68,7 @@ function Content() {
         <iframe
           className="w-full aspect-video ..."
           title="myself iframe"
-          src="https:/www.youtube.com/embed/tAbcTOTMhs0"
+          src="https://www.youtube.com/embed/tAbcTOTMhs0"
         ></iframe>
       </div>
     </div>
