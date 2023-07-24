@@ -9,13 +9,13 @@ import java from "../assets/java.png";
 
 function Certificate() {
   return (
-    <div className="grid justify-items-center ... mt-10 mb-10">
+    <div className="grid sm:justify-items-center ... mt-10 mb-10">
       <h1 className="text-7xl mt-10 mb-10 font-mono">Certificates</h1>
       <div
         className="artboard artboard-horizontal phone-5 mb-60"
         data-theme="dracula"
       >
-        <div className="grid justify-items-center ...">
+        <div className="grid sm:justify-items-center ...">
           <div className="carousel w-full">
             <div id="slide1" className="carousel-item relative w-full">
               <img src={web} className="w-full" alt="web" />
@@ -67,7 +67,7 @@ function Certificate() {
                 alt="python beginner"
                 className="w-full"
               />
-              <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <div className="absolute sm:flex sm:justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                 <a href="#slide4" className="btn btn-circle">
                   ❮
                 </a>
@@ -78,7 +78,7 @@ function Certificate() {
             </div>
             <div id="slide6" className="carousel-item relative w-full">
               <img src={pythonDS} alt="pytho-DS" className="w-full" />
-              <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <div className="absolute sm:flex sm:justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                 <a href="#slide5" className="btn btn-circle">
                   ❮
                 </a>
@@ -87,9 +87,9 @@ function Certificate() {
                 </a>
               </div>
             </div>
-            <div id="slide7" className="carousel-item relative w-full">
+            <div id="slide7" className="carousel-item relative sm:w-full">
               <img src={java} alt="java" className="w-full" />
-              <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <div className="absolute sm:flex sm:justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                 <a href="#slide6" className="btn btn-circle">
                   ❮
                 </a>
