@@ -16,7 +16,7 @@ function Project() {
       <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5 ml-5 mr-5">
         <div class="col-span-1">
           <div className="card w-96 bg-base-100 shadow-xl ">
-            {/* ... Card 1 content ... */}
+            {/* ... project 1 content ... */}
             <div class="row-start-1 col-start-2 col-span-4 ... sm:mt-5">
               <div className="card w-96 bg-base-100 shadow-xl ">
                 <figure className="px-10 pt-10">
@@ -45,9 +45,9 @@ function Project() {
         </div>
         <div class="col-span-1">
           <div className="card w-96 bg-base-100 shadow-xl">
-            {/* ... Card 2 content ... */}
+            {/* ... project 2 content ... */}
 
-            <div className="row-start-1 col-end-7 col-span-2 ... sm:mt-5 sm:mr-20">
+            <div className="row-start-2 col-end-7 col-span-2 ... sm:mt-5 sm:mr-20">
               <div className="card w-96 bg-base-100 shadow-xl">
                 <figure className="px-10 pt-10">
                   <img src={academic} alt="academic" className="rounded-xl" />
@@ -79,8 +79,8 @@ function Project() {
         </div>
         <div class="col-span-1">
           <div className="card w-96 bg-base-100 shadow-xl ">
-            {/* ... Card 3 content ... */}
-            <div class="col-start-1 col-end-3 ... ">
+            {/* ... project 3 content ... */}
+            <div class="lg:col-start-4 lg:col-end-5 ... ">
               <div className="card w-96 bg-base-100 shadow-xl ">
                 <figure className="px-10 pt-10">
                   <img src={todoapp} alt="todo-app" className="rounded-xl" />
@@ -107,10 +107,10 @@ function Project() {
             </div>
           </div>
         </div>
-        <div class="col-span-1 sm:mb-5">
+        <div class="col-span-1 lg:row-start-2 lg:col-start-2 lg:col-end-5 sm:mb-10">
           <div className="card w-96 bg-base-100 shadow-xl ">
-            {/* ... Card 4 content ... */}
-            <div class="col-end-6 col-span-2 ...">
+            {/* ... project 4 content ... */}
+            <div class=" col-end-6 col-span-2 ...">
               <div className="card w-96 bg-base-100 shadow-xl ">
                 <figure className="px-10 pt-10">
                   <img src={chatapp} alt="chatapp" className="rounded-xl" />
