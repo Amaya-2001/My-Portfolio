@@ -4,7 +4,7 @@ import "../App.css";
 
 function Navbar() {
   return (
-    <div>
+    <div className="">
       <nav class="bg-white border-gray-200 dark:bg-gray-900">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <div class="flex items-center md:order-2">

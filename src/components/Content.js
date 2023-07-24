@@ -8,14 +8,11 @@ function Content() {
     window.open(url, "_blank", "norefrrer");
   };
   return (
-    <div className="gap-8 columns-2 ... mt-20">
-      <div className="card w-96 bg-base-100 shadow-xl ml-60  mb-10">
+    <div className="gap-8 columns-1 sm:columns-2 mt-20 sm:flex sm:justify-center ">
+      <div className="card w-80 sm:w-96 bg-base-100 shadow-xl mx-auto sm:ml-0 sm:mr-4 mb-8 sm:mb-0">
         <div className="card-body items-center text-center">
-          <h2 className="card-title text-4xcl">👋Hello, It's Me</h2>
-          <div className="card-title text-2xl italic">
-            {" "}
-            Amaya Wickramasinghe
-          </div>
+          <h2 className="card-title text-4xl">👋Hello, It's Me</h2>
+          <div className="card-title text-xl italic"> Amaya Wickramasinghe</div>
           <p>
             An Undergraduate software Engineer at the Open University of Sri
             Lanka. I possess a strong aptitude for adapting to various
@@ -24,11 +21,13 @@ function Content() {
             you.
           </p>
           <Link to="/contact">
-            <button class="btn rounded-full mt-5 btn-primary btn-outline">
-              <FaLinkedin size="25" />
-              <MdEmail size="25" />
-              <FaFacebook size="25" />
-            </button>
+            <div className="flex justify-center mt-5 space-x-4">
+              <button class="btn rounded-full  btn-primary btn-outline">
+                <FaLinkedin size="25" />
+                <MdEmail size="25" />
+                <FaFacebook size="25" />
+              </button>
+            </div>
           </Link>
 
           <div className="card-actions mt-5">
@@ -46,27 +45,10 @@ function Content() {
           </div>
         </div>
       </div>
-      {/* <div className="carousel carousel-end rounded-box mt-20 ml-10 mr-5">
-        <div className="carousel-item">
-          <img src={display} alt="Drink" width="300 px" />
-        </div>
-        <div className="carousel-item">
-          <img src={display} alt="Drink" width="300 px" />
-        </div>
-        <div className="carousel-item">
-          <img src={display} alt="Drink" width="300 px" />
-        </div>
-      </div> */}
-      {/* <img
-        className="mt-40 ml-20"
-        src={display}
-        alt="Album"
-        width="565 px"
-        // height="765 px"
-      /> */}
-      <div className="aspect-video mr-5">
+
+      <div className="aspect-w-16 aspect-h-9 sm:w-96 sm:ml-4 sm:mr-0">
         <iframe
-          className="w-full aspect-video ..."
+          className="w-full h-full"
           title="myself iframe"
           src="https://www.youtube.com/embed/tAbcTOTMhs0"
         ></iframe>
