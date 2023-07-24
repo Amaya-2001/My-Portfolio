@@ -16,9 +16,9 @@ function Skills() {
   return (
     <div className="grid justify-items-center ... mt-10 mb-10">
       <h1 className="text-7xl mt-10 mb-10 font-mono">Skills</h1>
-      <div class="grid grid-cols-3 gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         <div>
-          <div className="card w-96 bg-base-100 shadow-xl ml-5 h-full">
+          <div className="card w-full bg-base-100 shadow-xl mx-auto sm:ml-5 sm:mr-5 mb-10 h-full">
             <div className="card-body ">
               <h2 className="card-title font-bold">UX/UI Design</h2>
               <p>
@@ -97,7 +97,7 @@ function Skills() {
         </div>
 
         <div>
-          <div className="card w-96 bg-base-100 shadow-xl ml-10 h-full">
+          <div className="card w-full bg-base-100 shadow-xl mx-auto sm:ml-5 sm:mr-5 mb-10 h-full ">
             <div className="card-body">
               <h2 className="card-title font-bold">Web Design</h2>
               <p>
@@ -163,7 +163,7 @@ function Skills() {
           </div>
         </div>
         <div>
-          <div className="card w-96 bg-base-100 shadow-xl ml-5 h-full">
+          <div className="card w-full bg-base-100 shadow-xl mx-auto sm:ml-5 sm:mr-5 mb-10 h-full">
             <div className="card-body">
               <h2 className="card-title font-bold">My Tech Stack</h2>
               <p>
