@@ -12,8 +12,8 @@ function Article() {
         Unlock the Power of my Project Articles, Dive into Inspiring Insights
         and Expertise!
       </h1>
-      <div class="grid grid-cols-3 gap-6 mt-20 ml-5 mr-5">
-        <div className="card w-96 bg-primary text-primary-content">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 md:ml-5 md:mr-5">
+        <div className="card bg-primary text-primary-content">
           <div className="card-body">
             <h2 className="card-title">Article 1</h2>
             <p className="text-xl italic">
@@ -34,7 +34,7 @@ function Article() {
             </div>
           </div>
         </div>
-        <div className="card w-96 bg-primary text-primary-content">
+        <div className="card bg-primary text-primary-content">
           <div className="card-body">
             <h2 className="card-title">Article 2</h2>
             <p className="text-xl italic">
@@ -55,7 +55,7 @@ function Article() {
             </div>
           </div>
         </div>
-        <div className="card w-96 bg-primary text-primary-content">
+        <div className="card bg-primary text-primary-content">
           <div className="card-body">
             <h2 className="card-title">Article 3</h2>
             <p className="text-xl italic">
@@ -76,7 +76,7 @@ function Article() {
             </div>
           </div>
         </div>
-        <div className="card w-96 bg-primary text-primary-content">
+        <div className="card bg-primary text-primary-content">
           <div className="card-body">
             <h2 className="card-title">Article 4</h2>
             <p className="text-xl italic">
@@ -97,7 +97,7 @@ function Article() {
             </div>
           </div>
         </div>
-        <div className="card w-96 bg-primary text-primary-content">
+        <div className="card bg-primary text-primary-content">
           <div className="card-body">
             <h2 className="card-title">Article 5</h2>
             <p className="text-xl italic">
@@ -118,7 +118,7 @@ function Article() {
             </div>
           </div>
         </div>
-        <div className="card w-96 bg-primary text-primary-content">
+        <div className="card bg-primary text-primary-content">
           <div className="card-body">
             <h2 className="card-title">Article 6</h2>
             <p className="text-xl italic">Creating Todo App With Next JS</p>
