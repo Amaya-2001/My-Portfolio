@@ -46,7 +46,10 @@ function Content() {
         </div>
       </div>
 
-      <div className="aspect-w-16 aspect-h-9 sm:w-96 sm:ml-4 sm:mr-0">
+      <div
+        style={{ maxWidth: "640px", width: "100%" }}
+        className="aspect-w-16 aspect-h-9 sm:w-96 sm:ml-4 sm:mr-0"
+      >
         <iframe
           className="w-full h-full"
           title="myself iframe"
