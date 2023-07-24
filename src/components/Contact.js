@@ -9,10 +9,10 @@ function Contact() {
     window.open(url, "_blank", "noreferrer");
   };
   return (
-    <div className="bg-gradient-to-r from-violet-950 via-purple-500 to-pink-500 ... h-screen ....">
+    <div className="bg-gradient-to-r from-violet-950 via-purple-500 to-pink-500 ... sm:h-full ....">
       <Navbar />
-      <div class="flex justify-center ... mt-20">
-        <div className="card lg:card-side bg-base-100 shadow-xl">
+      <div class="flex justify-center ... sm:mt-20 ">
+        <div className="card lg:card-side bg-base-100 shadow-xl sm:mb-20">
           <div>
             <h1 className="text-7xl font-mono mt-5 ml-5 ">Contact Me</h1>
             <img src={profile} alt="profile" className=" ml-20" />
