@@ -51,17 +51,6 @@ function Contact() {
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="p-3 rounded-lg bg-primary/10">
-                      <MdPhone className="w-6 h-6 text-primary" />
-                    </div>
-                    <div>
-                      <p className="font-semibold">Phone</p>
-                      <a href={`tel:${profile.phone}`} className="text-sm hover:text-primary transition-colors">
-                        {profile.phone}
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-4">
-                    <div className="p-3 rounded-lg bg-primary/10">
                       <MdLocationOn className="w-6 h-6 text-primary" />
                     </div>
                     <div>
