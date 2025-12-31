@@ -1,89 +1,105 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import "../App.css";
+import { NavLink, useLocation } from "react-router-dom";
+import { profile } from "../data/profile";
 
 function Navbar() {
-  return (
-    <div class="">
-      <nav class="bg-white border-gray-200 dark:bg-gray-900">
-        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <div class="flex items-center md:order-2">
-            <button
-              data-collapse-toggle="navbar-user"
-              type="button"
-              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-              aria-controls="navbar-user"
-              aria-expanded="false"
-            >
-              <svg
-                class="w-5 h-5"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 17 14"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M1 1h15M1 7h15M1 13h15"
-                />
-              </svg>
-            </button>
-          </div>
-          <div
-            class="items-center justify-between w-full md:w-auto md:flex md:items-center md:order-1"
-            id="navbar-user"
-          >
-            <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-              <li>
-                <a
-                  href="home"
-                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  <NavLink to="/" activeClassName="active">
-                    Home
-                  </NavLink>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="articles"
-                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                  aria-current="page"
-                >
-                  <NavLink to="/articles" activeClassName="active">
-                    Articles
-                  </NavLink>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="projects"
-                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  <NavLink to="/project" activeClassName="active">
-                    Projects
-                  </NavLink>
-                </a>
-              </li>
+  const location = useLocation();
+  const isHome = location.pathname === "/";
 
-              <li>
-                <a
-                  href="contact"
-                  class="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                >
-                  <NavLink to="/contact" activeClassName="active">
-                    Contact
-                  </NavLink>
-                </a>
-              </li>
-            </ul>
-          </div>
+  return (
+    <header className="sticky top-0 z-50 flex items-center justify-between border-b border-base-200 bg-base-100/90 backdrop-blur-md px-4 sm:px-10 py-4 shadow-sm">
+      <div className="flex items-center gap-4">
+        <div className="w-6 h-6 text-primary">
+          <svg fill="currentColor" viewBox="0 0 24 24">
+            <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" />
+          </svg>
         </div>
-      </nav>
-    </div>
+        <h2 className="text-lg font-bold">{profile.name}</h2>
+      </div>
+      <div className="hidden md:flex flex-1 justify-end gap-8 items-center">
+        <nav className="flex items-center gap-6 lg:gap-9">
+          {isHome ? (
+            <>
+              <a className="text-sm font-medium hover:text-primary transition-colors" href="#about">
+                About
+              </a>
+              <a className="text-sm font-medium hover:text-primary transition-colors" href="#skills">
+                Skills
+              </a>
+              <a className="text-sm font-medium hover:text-primary transition-colors" href="#experience">
+                Experience
+              </a>
+              <NavLink
+                to="/project"
+                className="text-sm font-medium hover:text-primary transition-colors"
+              >
+                Projects
+              </NavLink>
+              <NavLink
+                to="/articles"
+                className="text-sm font-medium hover:text-primary transition-colors"
+              >
+                Articles
+              </NavLink>
+              <NavLink
+                to="/contact"
+                className="text-sm font-medium hover:text-primary transition-colors"
+              >
+                Contact
+              </NavLink>
+            </>
+          ) : (
+            <>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  `text-sm font-medium transition-colors ${isActive ? 'text-primary' : 'hover:text-primary'}`
+                }
+              >
+                Home
+              </NavLink>
+              <NavLink
+                to="/project"
+                className={({ isActive }) =>
+                  `text-sm font-medium transition-colors ${isActive ? 'text-primary' : 'hover:text-primary'}`
+                }
+              >
+                Projects
+              </NavLink>
+              <NavLink
+                to="/articles"
+                className={({ isActive }) =>
+                  `text-sm font-medium transition-colors ${isActive ? 'text-primary' : 'hover:text-primary'}`
+                }
+              >
+                Articles
+              </NavLink>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) =>
+                  `text-sm font-medium transition-colors ${isActive ? 'text-primary' : 'hover:text-primary'}`
+                }
+              >
+                Contact
+              </NavLink>
+            </>
+          )}
+        </nav>
+        <a
+          className="btn btn-primary btn-sm"
+          href={profile.links.resume}
+          target="_blank"
+          rel="noreferrer"
+        >
+          Resume
+        </a>
+      </div>
+      <button className="md:hidden p-2">
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </header>
   );
 }
 

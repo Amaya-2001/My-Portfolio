@@ -1,145 +1,81 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "./Navbar";
-import academic from "../assets/academic.png";
-import { FaGithub } from "react-icons/fa";
-import todoapp from "../assets/todo-app.webp";
-import chatapp from "../assets/chatApp.png";
-import attendy from "../assets/attedny.png";
+import { projects } from "../data/projects";
+import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+
 function Project() {
-  const openInNewTab = (url) => {
-    window.open(url, "_blank", "norefrrer");
-  };
+  const [activeFilter, setActiveFilter] = useState("All");
+  const categories = ["All", ...new Set(projects.map((p) => p.category))];
+
+  const filteredProjects = activeFilter === "All"
+    ? projects
+    : projects.filter((p) => p.category === activeFilter);
+
   return (
-    <div>
+    <div className="min-h-screen bg-base-200">
       <Navbar />
-
-      <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5 ml-5 mr-5">
-        <div class="col-span-1">
-          <div className="card w-96 bg-base-100 shadow-xl ">
-            {/* ... project 1 content ... */}
-            <div class="row-start-1 col-start-2 col-span-4 ... sm:mt-5">
-              <div className="card w-96 bg-base-100 shadow-xl ">
-                <figure className="px-10 pt-10">
-                  <img src={attendy} alt="attendy" className="rounded-xl" />
-                </figure>
-                <div className="card-body items-center text-center">
-                  <h2 className="card-title">Attendy</h2>
-                  <p>
-                    An attendance management system made with React JS, Node JS
-                    - Express and MONGODB. My Contributions: Student Management,
-                    UI improvements and documentation.
-                  </p>
-                  <div className="card-actions">
-                    <button
-                      className="btn btn-primary"
-                      role="link"
-                      onClick={() => openInNewTab("https://github.com/Team-4X")}
-                    >
-                      <FaGithub size="25px" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+      <div className="w-full max-w-7xl mx-auto px-4 md:px-10 py-16 md:py-24">
+        <div className="text-center mb-12">
+          <span className="text-primary font-bold tracking-wider uppercase text-sm">My Work</span>
+          <h1 className="text-4xl md:text-5xl font-bold mt-2">Projects</h1>
         </div>
-        <div class="col-span-1">
-          <div className="card w-96 bg-base-100 shadow-xl">
-            {/* ... project 2 content ... */}
-
-            <div className="row-start-2 col-end-7 col-span-2 ... sm:mt-5 sm:mr-20">
-              <div className="card w-96 bg-base-100 shadow-xl">
-                <figure className="px-10 pt-10">
-                  <img src={academic} alt="academic" className="rounded-xl" />
-                </figure>
-                <div className="card-body items-center text-center">
-                  <h2 className="card-title">Academic Time Table</h2>
-                  <p>
-                    Create a timetable according to the academic schedule; the
-                    user can edit, delete, and add academic activities. These
-                    are the functions of this web app.
-                  </p>
-                  <div className="card-actions">
-                    <button
-                      className="btn btn-primary"
-                      role="link"
-                      onClick={() =>
-                        openInNewTab(
-                          "https://github.com/Amaya-2001/Academic-Time-Table"
-                        )
-                      }
-                    >
-                      <FaGithub size="25px" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div className="flex flex-wrap justify-center gap-3 mb-10">
+          {categories.map((category) => (
+            <button
+              key={category}
+              onClick={() => setActiveFilter(category)}
+              className={`btn btn-sm ${activeFilter === category ? "btn-primary" : "btn-outline"
+                }`}
+            >
+              {category}
+            </button>
+          ))}
         </div>
-        <div class="col-span-1">
-          <div className="card w-96 bg-base-100 shadow-xl ">
-            {/* ... project 3 content ... */}
-            <div class="lg:col-start-4 lg:col-end-5 ... ">
-              <div className="card w-96 bg-base-100 shadow-xl ">
-                <figure className="px-10 pt-10">
-                  <img src={todoapp} alt="todo-app" className="rounded-xl" />
-                </figure>
-                <div className="card-body items-center text-center">
-                  <h2 className="card-title">Todo App</h2>
-                  <p>
-                    Task Management web app made with Next JS, Typescript and
-                    Json-server API.
-                  </p>
-                  <div className="card-actions">
-                    <button
-                      className="btn btn-primary"
-                      role="link"
-                      onClick={() =>
-                        openInNewTab("https://github.com/Amaya-2001/ToDoApp")
-                      }
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {filteredProjects.map((project) => (
+            <div key={project.id} className="card bg-base-100 shadow-lg hover:shadow-2xl transition-all duration-300 group">
+              <figure className="relative overflow-hidden h-48">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4 gap-3">
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn btn-circle btn-sm btn-primary"
                     >
-                      <FaGithub size="25px" />
-                    </button>
-                  </div>
+                      <FaGithub size={20} />
+                    </a>
+                  )}
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn btn-circle btn-sm btn-primary"
+                    >
+                      <FaExternalLinkAlt size={16} />
+                    </a>
+                  )}
+                </div>
+              </figure>
+              <div className="card-body">
+                <h2 className="card-title text-lg">{project.title}</h2>
+                <p className="text-sm opacity-80">{project.description}</p>
+                <div className="flex flex-wrap gap-2 mt-3">
+                  {project.technologies.map((tech, index) => (
+                    <div key={index} className="badge badge-sm badge-outline">
+                      {tech}
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="col-span-1 lg:row-start-2 lg:col-start-2 lg:col-end-5 sm:mb-10">
-          <div className="card w-96 bg-base-100 shadow-xl ">
-            {/* ... project 4 content ... */}
-            <div class=" col-end-6 col-span-2 ...">
-              <div className="card w-96 bg-base-100 shadow-xl ">
-                <figure className="px-10 pt-10">
-                  <img src={chatapp} alt="chatapp" className="rounded-xl" />
-                </figure>
-                <div className="card-body items-center text-center">
-                  <h2 className="card-title">Chat App</h2>
-                  <p>
-                    {" "}
-                    Implemented Functions are search people, chat with each
-                    other and share files with contact list made with React JS
-                    and Firebase Cloud Database.
-                  </p>
-                  <div className="card-actions">
-                    <button
-                      className="btn btn-primary"
-                      role="link"
-                      onClick={() =>
-                        openInNewTab(
-                          "https://github.com/Amaya-2001/chat-app-using-React-js-and-Firebase"
-                        )
-                      }
-                    >
-                      <FaGithub size="25px" />
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

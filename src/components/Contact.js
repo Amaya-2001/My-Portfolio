@@ -1,84 +1,136 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
-import { MdEmail, MdLocationOn } from "react-icons/md";
-import { FaFacebook, FaLinkedin } from "react-icons/fa";
-import profile from "../assets/Capture2.png";
+import { profile } from "../data/profile";
+import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 function Contact() {
-  const openInNewTab = (url) => {
-    window.open(url, "_blank", "noreferrer");
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const mailtoLink = `mailto:${profile.email}?subject=Message from ${formData.name}&body=${formData.message}%0D%0A%0D%0AFrom: ${formData.name}%0D%0AEmail: ${formData.email}`;
+    window.location.href = mailtoLink;
+  };
+
   return (
-    <div className="bg-gradient-to-r from-violet-950 via-purple-500 to-pink-500 ... sm:h-full ....">
+    <div className="min-h-screen bg-base-200">
       <Navbar />
-      <div class="flex justify-center ... sm:mt-20 ">
-        <div className="card lg:card-side bg-base-100 shadow-xl sm:mb-20">
-          <div>
-            <h1 className="text-7xl font-mono mt-5 ml-5 ">Contact Me</h1>
-            <img src={profile} alt="profile" className=" ml-20" />
+      <div className="w-full max-w-7xl mx-auto px-4 md:px-10 py-16 md:py-24">
+        <div className="text-center mb-12">
+          <span className="text-primary font-bold tracking-wider uppercase text-sm">Get In Touch</span>
+          <h1 className="text-4xl md:text-5xl font-bold mt-2">Contact Me</h1>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <div className="flex flex-col gap-6">
+            <div className="card bg-base-100 shadow-lg">
+              <div className="card-body">
+                <h2 className="card-title text-2xl mb-4">Let's Connect</h2>
+                <p className="mb-6 opacity-80">
+                  Feel free to reach out for collaborations, freelance opportunities, or just a friendly chat about technology and software development.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 rounded-lg bg-primary/10">
+                      <MdEmail className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-semibold">Email</p>
+                      <a href={`mailto:${profile.email}`} className="text-sm hover:text-primary transition-colors">
+                        {profile.email}
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 rounded-lg bg-primary/10">
+                      <MdPhone className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-semibold">Phone</p>
+                      <a href={`tel:${profile.phone}`} className="text-sm hover:text-primary transition-colors">
+                        {profile.phone}
+                      </a>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4">
+                    <div className="p-3 rounded-lg bg-primary/10">
+                      <MdLocationOn className="w-6 h-6 text-primary" />
+                    </div>
+                    <div>
+                      <p className="font-semibold">Location</p>
+                      <p className="text-sm">{profile.location}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="divider"></div>
+                <div className="flex gap-4">
+                  <a href={profile.links.linkedin} target="_blank" rel="noreferrer" className="btn btn-circle btn-outline hover:btn-primary">
+                    <FaLinkedin size={24} />
+                  </a>
+                  <a href={profile.links.github} target="_blank" rel="noreferrer" className="btn btn-circle btn-outline hover:btn-primary">
+                    <FaGithub size={24} />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="card-body">
-            <div class="flex justify-center ... mt-10">
-              <div>
-                <button
-                  className="btn btn-outline btn-primary w-96 rounded-full lowercase ..."
-                  role="link"
-                  onClick={() =>
-                    openInNewTab(
-                      "mailto:amawickramasinghe2001@gmail.com?subject=Subject&body=Body%20goes%20here"
-                    )
-                  }
-                >
-                  <MdEmail size="25px" />
-                  <p>amawickramasinghe2001@gmail.com</p>
+          <div className="card bg-base-100 shadow-lg">
+            <div className="card-body">
+              <h2 className="card-title text-2xl mb-4">Send Message</h2>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text font-semibold">Name</span>
+                  </label>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Your Name"
+                    className="input input-bordered w-full"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text font-semibold">Email</span>
+                  </label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="your.email@example.com"
+                    className="input input-bordered w-full"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+                <div className="form-control">
+                  <label className="label">
+                    <span className="label-text font-semibold">Message</span>
+                  </label>
+                  <textarea
+                    name="message"
+                    placeholder="Your message..."
+                    className="textarea textarea-bordered h-32"
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" className="btn btn-primary w-full">
+                  Send Message
                 </button>
-              </div>
-            </div>
-            <div class="flex justify-center ... mt-10">
-              <div>
-                <button
-                  className="btn btn-outline btn-primary w-96 rounded-full capitalize ..."
-                  role="link"
-                  onClick={() =>
-                    openInNewTab(
-                      "https://www.linkedin.com/in/amaya-wickramasinghe-6378a6231/"
-                    )
-                  }
-                >
-                  <FaLinkedin size="25px" />
-                  <p>Amaya Wickramasinghe</p>
-                </button>
-              </div>
-            </div>
-            <div class="flex justify-center ... mt-10">
-              <div>
-                <button
-                  className="btn btn-outline btn-primary w-96 rounded-full lowercase ..."
-                  role="link"
-                  onClick={() =>
-                    openInNewTab(
-                      "https://www.facebook.com/profile.php?id=100090623790910"
-                    )
-                  }
-                >
-                  <FaFacebook size="25px" />
-                  <p>https://www.facebook.com/</p>
-                </button>
-              </div>
-            </div>
-            <div class="flex justify-center ... mt-10">
-              <div>
-                <button
-                  className="btn btn-outline btn-primary w-96 rounded-full capitalize ..."
-                  role="link"
-                  onClick={() =>
-                    openInNewTab(" https://maps.app.goo.gl/yScKo8ULruk8CUCGA")
-                  }
-                >
-                  <MdLocationOn size="25px" />
-                  <p>Wadduwa, Kalutara</p>
-                </button>
-              </div>
+              </form>
             </div>
           </div>
         </div>
