@@ -29,7 +29,7 @@ function Contact() {
           <span className="text-primary font-bold tracking-wider uppercase text-sm">Get In Touch</span>
           <h1 className="text-4xl md:text-5xl font-bold mt-2">Contact Me</h1>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div className="grid  gap-10">
           <div className="flex flex-col gap-6">
             <div className="card bg-base-100 shadow-lg">
               <div className="card-body">
@@ -69,57 +69,6 @@ function Contact() {
                   </a>
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="card bg-base-100 shadow-lg">
-            <div className="card-body">
-              <h2 className="card-title text-2xl mb-4">Send Message</h2>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text font-semibold">Name</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    className="input input-bordered w-full"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text font-semibold">Email</span>
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="your.email@example.com"
-                    className="input input-bordered w-full"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div className="form-control">
-                  <label className="label">
-                    <span className="label-text font-semibold">Message</span>
-                  </label>
-                  <textarea
-                    name="message"
-                    placeholder="Your message..."
-                    className="textarea textarea-bordered h-32"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                  ></textarea>
-                </div>
-                <button type="submit" className="btn btn-primary w-full">
-                  Send Message
-                </button>
-              </form>
             </div>
           </div>
         </div>
