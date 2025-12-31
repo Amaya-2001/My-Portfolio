@@ -13,7 +13,7 @@ export const profile = {
         portfolio: "https://amaya-wickramasinghe.netlify.app/",
         facebook: "https://www.facebook.com/profile.php?id=100090623790910",
         resume:
-            "https://drive.google.com/file/d/1r9JyQp1USHrXQ6ccGrxNqqWZOPqVWo5h/view?usp=sharing",
+            "https://drive.google.com/file/d/1q961BStdWGmZL_aakMrolRHjYxz7DlTc/view?usp=sharing",
     },
 };
 
