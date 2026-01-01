@@ -42,6 +42,12 @@ function Navbar() {
                 Articles
               </NavLink>
               <NavLink
+                to="/research"
+                className="text-sm font-medium hover:text-primary transition-colors"
+              >
+                Research
+              </NavLink>
+              <NavLink
                 to="/contact"
                 className="text-sm font-medium hover:text-primary transition-colors"
               >
@@ -73,6 +79,14 @@ function Navbar() {
                 }
               >
                 Articles
+              </NavLink>
+              <NavLink
+                to="/research"
+                className={({ isActive }) =>
+                  `text-sm font-medium transition-colors ${isActive ? 'text-primary' : 'hover:text-primary'}`
+                }
+              >
+                Research
               </NavLink>
               <NavLink
                 to="/contact"

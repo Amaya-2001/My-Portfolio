@@ -4,6 +4,7 @@ import Article from "./components/Article";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import Project from "./components/Project";
+import Research from "./components/Research";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/articles" element={<Article />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/project" element={<Project />}></Route>
+        <Route path="/research" element={<Research />}></Route>
       </Routes>
     </div>
   );
