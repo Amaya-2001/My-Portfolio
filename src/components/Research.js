@@ -77,20 +77,6 @@ function Research() {
                 <div className="mb-16">
                     <h2 className="text-2xl font-bold mb-6">Featured Research</h2>
                     <div className="card lg:card-side bg-base-100 shadow-2xl overflow-hidden border border-base-300">
-                        <figure className="lg:w-2/5 relative">
-                            <img
-                                src={research.featured.image}
-                                alt={research.featured.title}
-                                className="w-full h-full object-cover"
-                            />
-                            <div className="absolute top-4 right-4">
-                                {research.featured.award && (
-                                    <div className="badge badge-warning gap-2 p-3 shadow-lg">
-                                        <FaAward /> {research.featured.award}
-                                    </div>
-                                )}
-                            </div>
-                        </figure>
                         <div className="card-body lg:w-3/5">
                             <div className="flex items-center gap-2 mb-2">
                                 <span className="badge badge-primary">{research.featured.category}</span>
@@ -98,10 +84,6 @@ function Research() {
                             </div>
                             <h2 className="card-title text-2xl mb-3">{research.featured.title}</h2>
                             <div className="text-sm space-y-1 mb-4">
-                                <p>
-                                    <span className="font-semibold">Co-authored with:</span>{" "}
-                                    {research.featured.supervisor}
-                                </p>
                                 <p>
                                     <span className="font-semibold">Institution:</span>{" "}
                                     {research.featured.institution}
@@ -154,7 +136,10 @@ function Research() {
 
                             <div className="flex flex-wrap gap-2 mb-4">
                                 {research.featured.tags.map((tag, idx) => (
-                                    <div key={idx} className="badge badge-outline badge-sm">
+                                    <div
+                                        key={idx}
+                                        className="badge badge-lg bg-grey badge-outline"
+                                    >
                                         {tag}
                                     </div>
                                 ))}
@@ -172,7 +157,7 @@ function Research() {
                 </div>
 
                 {/* Recent Publications */}
-                <div>
+                {/* <div>
                     <div className="flex justify-between items-center mb-6">
                         <h2 className="text-2xl font-bold">Recent Publications</h2>
                         <a
@@ -229,7 +214,7 @@ function Research() {
                             <button className="btn btn-outline">Load More Publications</button>
                         </div>
                     )}
-                </div>
+                </div> */}
             </div>
         </div>
     );

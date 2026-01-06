@@ -15,10 +15,10 @@ export const research = {
         award: "Final Year Research Project",
         problemStatement: "Note-taking plays a vital role in effective learning, serving as a bridge between lecture delivery and knowledge retention. However, many students struggle to capture and organize essential information during or after lectures. Lecture transcripts, while comprehensive, are often lengthy and unstructured, making it difficult for learners to identify key concepts and review materials efficiently.",
         objectives: [
-            "Design an AI-powered framework to automatically transform lecture transcripts into structured, student-friendly notes",
-            "Implement personalization features to adapt notes to individual learning styles and preferences",
-            "Integrate local language support (Sinhala) to enhance accessibility for diverse learners",
-            "Evaluate the system's effectiveness in improving learning outcomes and student engagement"
+            "Analysis of learnerstyle differences among students",
+            "Assessment of personalized notes on learning outcomes",
+            "Integration of local language support in note generation",
+            "Generation of concise lecture notesfrom transcripts",
         ],
         methodology: [
             "Quantitative: Pre/post-test assessments, system performance metrics (ROUGE, BLEU scores)",
