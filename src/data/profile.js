@@ -1,7 +1,7 @@
 export const profile = {
     name: "Amaya Wickramasinghe",
     headline: "Software Engineer",
-    tagline: "Building digital products, brands, and experiences.",
+    tagline: "Full-Stack Developer Building Reliable Software with Modern AI-Driven Workflows",
     location: "Wadduwa, Kalutara",
     email: "amawickramasinghe2001@gmail.com",
     phone: "+94 740365128",
@@ -25,7 +25,31 @@ export const experience = [
         description: [
             "Develop and maintain full-stack features for Document Management and ERP systems."
         ],
-        technologies: ["React", "TypeScript", "Next.js", "PostgreSQL", "MUI", "Tailwind CSS"],
+        technologies: ["React", "TypeScript", "NestJS", "PostgreSQL", "Drizzle ORM", "AWS", "Railway"],
+        projects: [
+            {
+                name: "Document Management System",
+                role: "Main Developer (Full Stack)",
+                description: [
+                    "Worked as the main developer, handling both frontend and backend development",
+                    "Built the application using React.js, TypeScript, NestJS, PostgreSQL, and Drizzle ORM",
+                    "Integrated and deployed services using AWS and Railway",
+                    "Developed a digital solution for a South African insurance organization, transforming their manual document workflows into a fully digitalized system",
+                    "Implemented features to manage document processing, storage, and workflow automation, improving operational efficiency"
+                ],
+                technologies: ["React.js", "TypeScript", "NestJS", "PostgreSQL", "Drizzle ORM", "AWS", "Railway"]
+            },
+            {
+                name: "Inventory & Accounting Management System (SaaS Product)",
+                role: "Frontend Developer",
+                description: [
+                    "Contributed to the development of Kyno Labs' in-house SaaS product",
+                    "Built using React.js, TypeScript, and NestJS",
+                    "Primarily worked as a Frontend Developer, developing user interfaces and improving usability for inventory and accounting management features"
+                ],
+                technologies: ["React.js", "TypeScript", "NestJS"]
+            }
+        ]
     },
     {
         role: "Assistant Coordinator & Associate Software Engineer",

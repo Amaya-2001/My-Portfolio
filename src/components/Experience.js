@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { experience } from "../data/profile";
 
 function Experience() {
+    const [expandedProjects, setExpandedProjects] = useState({});
+
+    const toggleProject = (expIndex, projIndex) => {
+        const key = `${expIndex}-${projIndex}`;
+        setExpandedProjects(prev => ({
+            ...prev,
+            [key]: !prev[key]
+        }));
+    };
+
     return (
         <section id="experience" className="w-full max-w-7xl mx-auto px-4 md:px-10 py-16 md:py-24 bg-base-100">
             <div className="flex flex-col gap-10">
@@ -24,14 +34,68 @@ function Experience() {
                                         <div className="card-body p-6">
                                             <h3 className="card-title text-xl">{exp.role}</h3>
                                             <p className="text-sm opacity-70 mb-3">{exp.company} • {exp.period}</p>
-                                            <ul className="space-y-2">
-                                                {exp.description.map((desc, idx) => (
-                                                    <li key={idx} className="flex gap-2 text-sm">
-                                                        <span className="text-primary mt-1">▸</span>
-                                                        <span>{desc}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
+
+                                            {!exp.projects && (
+                                                <ul className="space-y-2">
+                                                    {exp.description.map((desc, idx) => (
+                                                        <li key={idx} className="flex gap-2 text-sm">
+                                                            <span className="text-primary mt-1">▸</span>
+                                                            <span>{desc}</span>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            )}
+
+                                            {exp.projects && (
+                                                <div className="space-y-1">
+                                                    <p className="text-sm font-semibold text-gray-600 mb-2">Projects:</p>
+                                                    {exp.projects.map((project, projIndex) => {
+                                                        const key = `${index}-${projIndex}`;
+                                                        const isExpanded = expandedProjects[key];
+
+                                                        return (
+                                                            <div key={projIndex} className="border border-base-300 rounded-lg overflow-hidden">
+                                                                <button
+                                                                    onClick={() => toggleProject(index, projIndex)}
+                                                                    className="w-full px-4 py-3 bg-base-200 hover:bg-base-300 transition-colors flex justify-between items-center text-left"
+                                                                >
+                                                                    <div>
+                                                                        <h4 className="font-semibold text-base">{project.name}</h4>
+                                                                    </div>
+                                                                    <span className={`text-xl transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`}>
+                                                                        ▼
+                                                                    </span>
+                                                                </button>
+
+                                                                {isExpanded && (
+                                                                    <div className="px-4 py-3 bg-base-100">
+                                                                        <ul className="space-y-2 mb-3">
+                                                                            {project.description.map((desc, idx) => (
+                                                                                <li key={idx} className="flex gap-2 text-sm">
+                                                                                    <span className="text-primary mt-1">▸</span>
+                                                                                    <span>{desc}</span>
+                                                                                </li>
+                                                                            ))}
+                                                                        </ul>
+                                                                        {project.technologies && project.technologies.length > 0 && (
+                                                                            <div className="flex flex-wrap gap-2 mt-3">
+                                                                                {project.technologies.map((tech, idx) => (
+                                                                                    <span
+                                                                                        key={idx}
+                                                                                        className="badge badge-sm badge-outline"
+                                                                                    >
+                                                                                        {tech}
+                                                                                    </span>
+                                                                                ))}
+                                                                            </div>
+                                                                        )}
+                                                                    </div>
+                                                                )}
+                                                            </div>
+                                                        );
+                                                    })}
+                                                </div>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
