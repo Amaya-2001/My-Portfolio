@@ -212,12 +212,15 @@ export const technicalSkills = [
     "Figma",
     "Jira",
     "GitHub",
+    "Drizzle ORM",
+    "AWS",
+    "Railway",
 ];
 
 export const keySkills = [
     "Problem solving",
     "Multitasking",
-    "AI Tools Proficiency",
+    "Vibe Coding & Agentic Development",
     "Planning and organizing",
     "Excellent communication",
     "Adaptability",
