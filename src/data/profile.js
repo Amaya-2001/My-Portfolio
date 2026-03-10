@@ -5,6 +5,7 @@ export const profile = {
     location: "Wadduwa, Kalutara",
     email: "amawickramasinghe2001@gmail.com",
     phone: "+94 740365128",
+    calendlyUrl: "https://calendly.com/amawickramasinghe2001/30min", // Replace with your actual Calendly URL
     summary:
         "Full Stack Developer with 2.5+ years of experience delivering reliable, high-quality solutions in fast-paced environments. Strong problem-solver with a track record of adapting quickly and contributing effectively to team goals. Skilled in using AI tools and prompt engineering to work smarter and accelerate development workflows.",
     links: {
