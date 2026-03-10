@@ -216,6 +216,7 @@ export const technicalSkills = [
     "GitHub",
     "Drizzle ORM",
     "AWS",
+    "Azure",
     "Railway",
 ];
 
