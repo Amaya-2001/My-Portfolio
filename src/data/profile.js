@@ -191,9 +191,10 @@ export const education = [
         period: "Jul 2021 - Present",
     },
     {
-        degree: "GCE A/L - Physical Science",
-        institution: "Wadduwa Central College",
-        period: "",
+        degree: "SLIIT AI/ML Engineer – Stage 1 Course",
+        institution: "Sri Lanka Institute of Information Technology (SLIIT)",
+        period: "2026",
+        achievement: "In Progress",
     },
 ];
 
