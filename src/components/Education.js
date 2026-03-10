@@ -3,7 +3,7 @@ import { education } from "../data/profile";
 
 function Education() {
     return (
-        <section id="education" className="w-full max-w-7xl mx-auto px-4 md:px-10 py-16 md:py-24">
+        <section id="education" className="w-full max-w-7xl mx-auto px-4 md:px-10 py-4 md:py-8">
             <div className="flex flex-col gap-10">
                 <div className="text-center">
                     <span className="text-primary font-bold tracking-wider uppercase text-sm">Academic Background</span>

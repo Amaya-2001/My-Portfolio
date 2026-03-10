@@ -3,7 +3,7 @@ import { technicalSkills, keySkills } from "../data/profile";
 
 function Skills() {
   return (
-    <section id="skills" className="w-full max-w-7xl mx-auto px-4 md:px-10 py-16 md:py-24 bg-base-200">
+    <section id="skills" className="w-full max-w-7xl mx-auto px-4 md:px-10 py-4 md:py-8 bg-base-200">
       <div className="flex flex-col gap-10">
         <div className="text-center">
           <span className="text-primary font-bold tracking-wider uppercase text-sm">What I Bring</span>

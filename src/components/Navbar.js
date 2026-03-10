@@ -29,6 +29,9 @@ function Navbar() {
               <a className="text-sm font-medium hover:text-primary transition-colors" href="#experience">
                 Experience
               </a>
+              <a className="text-sm font-medium hover:text-primary transition-colors" href="#services">
+                Services
+              </a>
               <NavLink
                 to="/project"
                 className="text-sm font-medium hover:text-primary transition-colors"

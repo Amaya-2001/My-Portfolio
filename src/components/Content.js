@@ -4,13 +4,13 @@ import profileImg from "../assets/Capture2.png";
 
 function Content() {
   return (
-    <section id="about" className="w-full max-w-7xl mx-auto px-4 md:px-10 py-16 md:py-24">
+    <section id="about" className="w-full max-w-7xl mx-auto px-4 md:px-10 py-4 md:py-8">
       <div className="flex flex-col-reverse gap-10 lg:flex-row lg:items-center">
         <div className="flex flex-col gap-6 lg:w-1/2 justify-center">
           <div className="flex flex-col gap-4 text-left">
-            <span className="text-primary font-bold tracking-wider uppercase text-sm">
+            {/* <span className="text-primary font-bold tracking-wider uppercase text-sm">
               {profile.headline}
-            </span>
+            </span> */}
             <h1 className="text-4xl font-black leading-tight tracking-tight md:text-5xl lg:text-6xl">
               {profile.tagline}
             </h1>
@@ -18,7 +18,7 @@ function Content() {
               {profile.summary}
             </p>
           </div>
-          <div className="flex flex-wrap gap-4 mt-4">
+          <div className="flex flex-wrap gap-4">
             <a href="#experience" className="btn btn-primary shadow-lg">
               View Work
             </a>
@@ -34,7 +34,7 @@ function Content() {
               Resume
             </a>
           </div>
-          <div className="flex gap-6 mt-6">
+          <div className="flex gap-6">
             <div className="flex flex-col">
               <span className="font-bold text-2xl">2.5+</span>
               <span className="text-sm opacity-70">Years Exp.</span>

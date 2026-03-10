@@ -14,10 +14,10 @@ function Project() {
   return (
     <div className="min-h-screen bg-base-200">
       <Navbar />
-      <div className="w-full max-w-7xl mx-auto px-4 md:px-10 py-16 md:py-24">
+      <div className="w-full max-w-7xl mx-auto px-4 md:px-10 py-4 md:py-8">
         <div className="text-center mb-12">
           <span className="text-primary font-bold tracking-wider uppercase text-sm">My Work</span>
-          <h1 className="text-4xl md:text-5xl font-bold mt-2">Projects</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mt-2">Technical Experiments</h1>
         </div>
         <div className="flex flex-wrap justify-center gap-3 mb-10">
           {categories.map((category) => (

@@ -13,7 +13,7 @@ function Experience() {
     };
 
     return (
-        <section id="experience" className="w-full max-w-7xl mx-auto px-4 md:px-10 py-16 md:py-24 bg-base-100">
+        <section id="experience" className="w-full max-w-7xl mx-auto px-4 md:px-10 py-4 md:py-8 bg-base-100">
             <div className="flex flex-col gap-10">
                 <div className="text-center">
                     <span className="text-primary font-bold tracking-wider uppercase text-sm">Career Path</span>
