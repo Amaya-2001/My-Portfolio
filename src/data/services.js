@@ -7,7 +7,7 @@ export const services = [
         packages: [
             {
                 name: "Basic",
-                price: "$1,500 - $3,000",
+                price: "$80 - $100",
                 features: [
                     "Single page application",
                     "Responsive design",
@@ -18,7 +18,7 @@ export const services = [
             },
             {
                 name: "Standard",
-                price: "$3,500 - $7,000",
+                price: "$200 - $400",
                 features: [
                     "Multi-page application",
                     "Advanced UI/UX design",
@@ -31,7 +31,7 @@ export const services = [
             },
             {
                 name: "Premium",
-                price: "$8,000 - $15,000",
+                price: "$600 - $1,500",
                 features: [
                     "Complex web application",
                     "Microservices architecture",
@@ -52,7 +52,7 @@ export const services = [
         packages: [
             {
                 name: "Basic",
-                price: "$800 - $1,500",
+                price: "$80 - $100",
                 features: [
                     "Landing page design",
                     "Mobile responsive",
@@ -63,7 +63,7 @@ export const services = [
             },
             {
                 name: "Standard",
-                price: "$2,000 - $4,000",
+                price: "$200 - $400",
                 features: [
                     "Multi-page website",
                     "Interactive components",
@@ -76,7 +76,7 @@ export const services = [
             },
             {
                 name: "Premium",
-                price: "$5,000 - $10,000",
+                price: "$600 - $1,500",
                 features: [
                     "Complex SPA/PWA",
                     "Advanced animations",
@@ -97,7 +97,7 @@ export const services = [
         packages: [
             {
                 name: "Basic",
-                price: "$1,200 - $2,500",
+                price: "$80 - $100",
                 features: [
                     "RESTful API development",
                     "Basic CRUD operations",
@@ -108,7 +108,7 @@ export const services = [
             },
             {
                 name: "Standard",
-                price: "$3,000 - $6,000",
+                price: "$200 - $400",
                 features: [
                     "Advanced API features",
                     "Authentication & authorization",
@@ -121,7 +121,7 @@ export const services = [
             },
             {
                 name: "Premium",
-                price: "$7,000 - $12,000",
+                price: "$600 - $1,500",
                 features: [
                     "Microservices architecture",
                     "Real-time processing",
@@ -142,7 +142,7 @@ export const services = [
         packages: [
             {
                 name: "Basic",
-                price: "$300/month",
+                price: "$100/month",
                 features: [
                     "Bug fixes",
                     "Minor updates",
@@ -153,7 +153,7 @@ export const services = [
             },
             {
                 name: "Standard",
-                price: "$800/month",
+                price: "$250/month",
                 features: [
                     "Bug fixes & updates",
                     "Feature enhancements",
@@ -165,7 +165,7 @@ export const services = [
             },
             {
                 name: "Premium",
-                price: "$1,500/month",
+                price: "$500/month",
                 features: [
                     "24/7 monitoring",
                     "Unlimited bug fixes",
@@ -179,44 +179,44 @@ export const services = [
     },
     {
         id: 5,
-        title: "Technical Consulting",
-        description: "Expert guidance on technology decisions, architecture design, and development best practices.",
-        icon: "consulting",
+        title: "AI Development",
+        description: "Build intelligent AI-powered solutions including chatbots and multi-agent AI systems.",
+        icon: "ai",
         packages: [
             {
                 name: "Basic",
-                price: "$100/hour",
+                price: "$120 - $190",
                 features: [
-                    "Technology consultation",
-                    "Code review",
-                    "Best practices guidance",
-                    "Email support",
-                    "1-2 sessions"
+                    "AI chatbot development",
+                    "OpenAI/Claude integration",
+                    "Basic conversation flow",
+                    "3 weeks delivery",
+                    "2 months support"
                 ]
             },
             {
                 name: "Standard",
-                price: "$1,500 - $3,000",
+                price: "$250 - $300",
                 features: [
-                    "Architecture design",
-                    "Technology stack selection",
-                    "Development roadmap",
-                    "Team training",
-                    "4-6 sessions",
-                    "Documentation"
+                    "Advanced AI chatbot",
+                    "Multi-turn conversations",
+                    "Custom training data",
+                    "Database integration",
+                    "4-5 weeks delivery",
+                    "3 months support"
                 ],
                 popular: true
             },
             {
                 name: "Premium",
-                price: "$2,500/month",
+                price: "$1,000 - $1,500",
                 features: [
-                    "Ongoing technical advisor",
-                    "Weekly consultations",
-                    "Code & architecture reviews",
-                    "Team mentoring",
-                    "Strategic planning",
-                    "Unlimited email support"
+                    "Multi-agent AI system",
+                    "Workflow automation",
+                    "Advanced integrations",
+                    "Real-time processing",
+                    "6-8 weeks delivery",
+                    "6 months support"
                 ]
             }
         ]
@@ -229,7 +229,7 @@ export const services = [
         packages: [
             {
                 name: "Basic",
-                price: "$2,000 - $4,000",
+                price: "$160 - $300",
                 features: [
                     "Simple mobile app",
                     "Cross-platform (iOS/Android)",
@@ -240,7 +240,7 @@ export const services = [
             },
             {
                 name: "Standard",
-                price: "$5,000 - $10,000",
+                price: "$600 - $1,500",
                 features: [
                     "Feature-rich mobile app",
                     "Push notifications",
@@ -253,7 +253,7 @@ export const services = [
             },
             {
                 name: "Premium",
-                price: "$12,000 - $20,000",
+                price: "$1,700 - $2,000",
                 features: [
                     "Complex mobile solution",
                     "Real-time features",

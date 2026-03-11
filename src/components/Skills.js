@@ -15,7 +15,7 @@ function Skills() {
               <h3 className="card-title text-2xl mb-4">Technical Skills</h3>
               <div className="flex flex-wrap gap-3">
                 {technicalSkills.map((skill, index) => (
-                  <div key={index} className="badge badge-lg badge-outline hover:badge-primary hover:scale-105 transition-all duration-200 cursor-pointer">
+                  <div key={index} className="badge badge-lg badge-outline hover:badge-light hover:scale-105 transition-all duration-200 cursor-pointer">
                     {skill}
                   </div>
                 ))}

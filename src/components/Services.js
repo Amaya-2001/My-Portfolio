@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { services } from "../data/services";
-import { FaCode, FaPaintBrush, FaServer, FaHeadset, FaLightbulb, FaMobileAlt, FaCheckCircle, FaStar } from "react-icons/fa";
+import { FaCode, FaPaintBrush, FaServer, FaHeadset, FaRobot, FaMobileAlt, FaCheckCircle, FaStar } from "react-icons/fa";
 
 function Services() {
     const [expandedService, setExpandedService] = useState(null);
@@ -11,7 +11,7 @@ function Services() {
             design: <FaPaintBrush className="w-8 h-8" />,
             server: <FaServer className="w-8 h-8" />,
             support: <FaHeadset className="w-8 h-8" />,
-            consulting: <FaLightbulb className="w-8 h-8" />,
+            ai: <FaRobot className="w-8 h-8" />,
             mobile: <FaMobileAlt className="w-8 h-8" />
         };
         return icons[iconName] || icons.code;
